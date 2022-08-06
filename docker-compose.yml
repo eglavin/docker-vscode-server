@@ -16,7 +16,7 @@ services:
     volumes:
       - ./vscode/data:/config
     ports:
-      - 3000:3000
+      - 3100:3000
 
   portainer:
     image: portainer/portainer-ce:latest # https://docs.portainer.io/
