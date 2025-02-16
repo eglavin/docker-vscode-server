@@ -17,17 +17,3 @@ services:
       - ./vscode/data:/config
     ports:
       - 3100:3000
-
-  portainer:
-    image: portainer/portainer-ce:latest # https://docs.portainer.io/
-    container_name: portainer
-    restart: unless-stopped
-    security_opt:
-      - no-new-privileges:true
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./portainer/data:/data
-    ports:
-      - 8000:8000
-      - 9443:9443
